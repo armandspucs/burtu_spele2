@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="sajaukts">Šeit būs sajauktais vārds</div>   
+    <input class="atbilde" />
+    <button>Pārbaudīt atbildi</button>
+
+    <script>
+    
+    let vardi_1 = ['koks','kods','koks','kods','koks','kods','koks','kods','koks','kods']
+
+    let randomNr = Math.random() * 10
+    randomNr =  Math.ceil( randomNr )
+    randomNr = randomNr-1
+
+    document.querySelector(".sajaukts").innerHTML=vardi_1[randomNr]+' , '+randomNr
+
+
+
+    </script>
+
+
+</body>
+</html>
