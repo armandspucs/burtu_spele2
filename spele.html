@@ -12,6 +12,7 @@
     <input class="atbilde" />
     <button onclick="parbaudit()">Pārbaudīt atbildi</button>
 
+
     <script>
     
     let vardi_1   = ['koks','kods','koks','kods','koks','kods','koks','kods','koks','kods']
@@ -33,6 +34,31 @@
             alert('Pareizi! ')
         }//beidzas if
     }//beidzas parbaudit()
+
+    function sajauktVardu(vards)
+    {
+        //console.log('sajauktVardu() palaists')
+        //console.log('sajaukšanai='+vards)
+
+        let vardaGarums = vards.length
+        let loopIndex = 0
+        let sajauktsVards = []
+
+        while( loopIndex != vardaGarums )
+        {
+            //console.log( vards[loopIndex] )
+
+            let randomIndex = Math.floor( Math.random() * vardaGarums )
+
+            sajauktsVards.push(vards[randomIndex])
+
+            loopIndex++
+        }
+
+        console.log(sajauktsVards)
+
+    }//beidzas sajauktVardu()
+
 
     </script>
 
