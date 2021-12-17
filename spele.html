@@ -23,7 +23,7 @@
     randomNr =  Math.ceil( randomNr )
     randomNr = randomNr-1
 
-    document.querySelector(".sajaukts").innerHTML=vardi_1_s[randomNr]+' , '+randomNr
+    document.querySelector(".sajaukts").innerHTML=  sajauktVardu(vardi_1[randomNr])  +' , '+randomNr
 
     function parbaudit()
     {
@@ -61,6 +61,10 @@
         }
 
         console.log(sajauktsVards)
+
+        sajauktsVards = sajauktsVards.join('')
+
+        return sajauktsVards
 
     }//beidzas sajauktVardu()
 
