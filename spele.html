@@ -40,6 +40,8 @@
         //console.log('sajauktVardu() palaists')
         //console.log('sajaukšanai='+vards)
 
+        let vardsIzjauksanai = vards.split('')
+
         let vardaGarums = vards.length
         let loopIndex = 0
         let sajauktsVards = []
@@ -48,9 +50,12 @@
         {
             //console.log( vards[loopIndex] )
 
-            let randomIndex = Math.floor( Math.random() * vardaGarums )
+            let randomIndex = Math.floor( Math.random() * vardsIzjauksanai.length )
 
-            sajauktsVards.push(vards[randomIndex])
+            sajauktsVards.push(vardsIzjauksanai[randomIndex])
+            vardsIzjauksanai.splice(randomIndex,1)
+
+            //console.log(vardsIzjauksanai)
 
             loopIndex++
         }
