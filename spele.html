@@ -19,11 +19,20 @@
     let vardi_1_s = ['sokk','odsk','sokk','odsk','sokk','odsk','sokk','odsk','sokk','odsk']
 
 
-    let randomNr = Math.random() * 10
-    randomNr =  Math.ceil( randomNr )
-    randomNr = randomNr-1
+    let randomNr
 
-    document.querySelector(".sajaukts").innerHTML=  sajauktVardu(vardi_1[randomNr])  +' , '+randomNr
+
+    function izveletiesVardu()
+    {
+        randomNr = Math.random() * 10
+        randomNr =  Math.ceil( randomNr )
+        randomNr = randomNr-1
+
+        document.querySelector(".sajaukts").innerHTML=  sajauktVardu(vardi_1[randomNr])  +' , '+randomNr
+    }
+
+    izveletiesVardu()
+    
 
     function parbaudit()
     {
