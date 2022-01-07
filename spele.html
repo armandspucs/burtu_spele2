@@ -18,8 +18,14 @@
     let vardi_1   = ['koks','kods','koks','kods','koks','kods','koks','kods','koks','kods']
     let vardi_1_s = ['sokk','odsk','sokk','odsk','sokk','odsk','sokk','odsk','sokk','odsk']
 
+    setInterval(skaititLaiku, 2000);
 
     let randomNr
+
+    function skaititLaiku() 
+    {
+        console.log('skaititLaiku ir palaists')
+    }
 
 
     function izveletiesVardu()
@@ -29,6 +35,8 @@
         randomNr = randomNr-1
 
         document.querySelector(".sajaukts").innerHTML=  sajauktVardu(vardi_1[randomNr])  +' , '+randomNr
+    
+        document.querySelector('.atbilde').value = ''
     }
 
     izveletiesVardu()
@@ -41,6 +49,11 @@
         if( atbilde == vardi_1[randomNr] )
         {
             alert('Pareizi! ')
+            izveletiesVardu()
+        }
+        else
+        {
+            alert('Nepareizi!')
         }//beidzas if
     }//beidzas parbaudit()
 
